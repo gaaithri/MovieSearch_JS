@@ -14,6 +14,10 @@ opacity: 0.6;
     width:400px;
 }
 
+#errView{
+    display: none;
+}
+
 .bgCol{
     color:#C2185B !important;   
     font-weight: bold;
