@@ -63,13 +63,13 @@
     <!-- Err page if Api call fails -->
     <div class="container-fluid" id="errView">
         <div class="row">
-            <div class="col-md-3 d-flex justify-content-center errBg">
+            <div class="col-md-3 d-flex justify-content-center errBg text-light">
                 No Show: Sorry Page Unavailable at this time
                
             </div>
             <div class="col-6 col-md-6 d-flex justify-content-center">
                 <img id="opnDisp" src="resources/pink_cinema.jpg"></div>
-            <div class="col-md-3 d-flex justify-content-center errBg">
+            <div class="col-md-3 d-flex justify-content-center errBg text-light">
                
                     <p>MoviesInc !MM! </p>
                     <p>Welcomes you to the Cinema World</p>
@@ -280,6 +280,10 @@
             var errData = document.getElementById("errView");
 
             var printMov = function (result) {
+                hideData.style.display = "none";
+                showData.style.display = "block";
+                hideSrc.style.display = "none";
+                errData.style.display = "none";
                 var data = JSON.parse(result);
                 console.log(data);
                 var movTitle = data.Title;
@@ -493,21 +497,21 @@
                 console.log(urLink);
             });
 
+            var hideData = document.getElementById('opnView');
+                var showData = document.getElementById('apiDisp');
+                var hideSrc = document.getElementById('srchResult');
+
             var opnDispBtn = document.getElementById("opnBtn");
             console.log(opnDispBtn)
             opnDispBtn.addEventListener('click', function () {
-                var hideData = document.getElementById('opnView');
-                var showData = document.getElementById('apiDisp');
-                var hideSrc = document.getElementById('srchResult');
+                // var hideData = document.getElementById('opnView');
+                // var showData = document.getElementById('apiDisp');
+                // var hideSrc = document.getElementById('srchResult');
                 console.log(hideData)
                 console.log("before loop")
                 urLink = "http://www.omdbapi.com/?i=tt0898266&Season=2&apikey=91589d02"
                 callApi(printMov);
                 console.log("landing page code")
-                hideData.style.display = "none";
-                showData.style.display = "block";
-                hideSrc.style.display = "none";
-                errData.style.display = "none";
                 console.log("after loop")
             });
         </script>
