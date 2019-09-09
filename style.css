@@ -4,6 +4,15 @@
 height: 40px;
 opacity: 0.6;
 }
+.errBg{
+    background: #C2185B;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding:30px;
+    font-size:25px;
+    font-weight: lighter;
+    width:400px;
+}
 
 .bgCol{
     color:#C2185B !important;   

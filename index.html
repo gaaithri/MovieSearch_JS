@@ -60,6 +60,23 @@
             </div>
         </div>
     </div>
+    <!-- Err page if Api call fails -->
+    <div class="container-fluid" id="errView">
+        <div class="row">
+            <div class="col-md-3 d-flex justify-content-center errBg">
+                No Show: Sorry Page Unavailable at this time
+               
+            </div>
+            <div class="col-6 col-md-6 d-flex justify-content-center">
+                <img id="opnDisp" src="resources/pink_cinema.jpg"></div>
+            <div class="col-md-3 d-flex justify-content-center errBg">
+               
+                    <p>MoviesInc !MM! </p>
+                    <p>Welcomes you to the Cinema World</p>
+                </button>
+            </div>
+        </div>
+    </div>
 
 
     <!-- On loading Api dispaly below data -->
@@ -94,13 +111,13 @@
                         <div class="card" style="width: 10rem;" float="right">
                             <a href="#"> <img src="resources/tvf_pitchers1.jpg" class="card-img-top" alt="Text1"></a>
                         </div>
-                   </div>
+                    </div>
                 </div>
-              <br>
+                <br>
 
-              <div class="row" float="right">
+                <div class="row" float="right">
                     <div class="col-md-12 cards">
-                       <div class="card" style="width: 10rem;" float="right">
+                        <div class="card" style="width: 10rem;" float="right">
                             <a href="#"> <img src="resources/office.jpg" class="card-img-top" alt="Text1"></a>
                         </div>
                         <div class="card" style="width: 10rem;" float="right">
@@ -198,7 +215,7 @@
                         <img class="mr-3 mb-4 mt-2" id="srch1" alt="Generic placeholder image">
                         <h5 class="mt-0 mb-1">Details</h5>
                         <div class="media-body text-light mediaCl" id="mBdy1">
-                       </div>
+                        </div>
                     </li>
                     <li class="media">
                         <img class="mr-3 mb-4 mt-2" id="srch2" alt="Generic placeholder image">
@@ -208,7 +225,7 @@
                     </li>
                     <li class="media">
                         <img class="mr-3 mb-4 mt-2" id="srch3" alt="Generic placeholder image">
-                       <h5 class="mt-0 mb-1">Details</h5>
+                        <h5 class="mt-0 mb-1">Details</h5>
                         <div class="media-body text-light mt-7 mediaCl" id="mBdy3">
                         </div>
                     </li>
@@ -223,7 +240,7 @@
         </div>
 
 
-    
+
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -249,12 +266,18 @@
                         printMov(result);
                     }
                     else {
+
+                        errData.style.display = "block";
+                        hideData.style.display = "none";
+                        showData.style.display = "none";
+                        hideSrc.style.display = "none";
                         console.log("There is an error in the request made" + xhr.response + xhr.response)
                     }
                 }
 
             }
 
+            var errData = document.getElementById("errView");
 
             var printMov = function (result) {
                 var data = JSON.parse(result);
@@ -272,6 +295,8 @@
                     dispOutput.textContent = "Error, No data found";
                 }
                 else {
+                    var pics = data.Search;
+
                     var img1 = document.querySelector("#imageCar1")
                     img1.setAttribute('src', 'resources/siliconValley.jpeg')
                     //  dispOutput.innerText=movTitle;
@@ -462,6 +487,7 @@
                 hideLdata.style.display = "none";
                 hideDispdata.style.display = "none";
                 showSrchdata.style.display = "block";
+                errData.style.display = "none";
                 callApi(dispSrchMov);
                 console.log(movieSrch);
                 console.log(urLink);
@@ -481,8 +507,10 @@
                 hideData.style.display = "none";
                 showData.style.display = "block";
                 hideSrc.style.display = "none";
+                errData.style.display = "none";
                 console.log("after loop")
             });
         </script>
 </body>
+
 </html>
