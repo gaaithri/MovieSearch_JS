@@ -1,0 +1,197 @@
+
+.headclass{
+
+height: 40px;
+opacity: 0.6;
+}
+
+.bgCol{
+    color:#C2185B !important;   
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+body{
+    background: #212121;
+    /* color:#EC407A; */
+    /* color:#E91E63; */
+    /* color:#F06292; */
+    color:#F50057;
+    font-family: 'Lobster', cursive;
+    
+}
+
+/* Opening page display */
+
+#opnView{
+    display: block; 
+   
+}
+#opnDisp{
+    margin-top: 10px;
+    /* display:block; */
+    width: 900px;
+    height: 600px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#opnBtn {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding:30px;
+    font-size:25px;
+    font-weight: lighter;
+    width:400px;
+}
+
+#opnBtn1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding:30px;
+    font-size:25px;
+    font-weight: lighter;
+    width:400px;}
+ /* Display on successful Api call */
+
+ #apiDisp{
+    
+    display: none;
+    flex-direction: row;
+
+     
+}
+
+#srchResult{
+    display: none;
+}
+
+.lookDisp{
+    background: #212121;
+     
+    height:10px;
+}
+
+.rowDisp{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left:10px;
+    margin-right:10px;
+    padding:20px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.card{
+    border: 1px solid orangered !important;
+    border-radius: 10px;
+    /* padding: 20px; */
+    box-shadow: 4px 4px 15px 2px;
+    flex-direction: row !important;
+    margin-right:-7rem !important;
+    padding: 0px;
+    /* height:10rem; */
+  
+}
+
+
+ /* .fun{
+     margin-left: 5px; 
+    
+}  */
+
+/* .card:not(:first-child) {
+    margin-left: -7rem;
+} */
+/* .card-body{
+    border: 1px dashed red !important;
+} */
+
+.cardCap{
+    font-size:10px;
+     margin-top: 10px; 
+     padding: 5px;
+}
+
+
+.carex {
+height: 600px;
+padding: 10px;
+color: aqua;
+font-weight: bolder;
+opacity: 1;
+/* margin-top:10px !important;  */
+margin: 10px !important;
+/* margin-right:10px !important; */
+
+}
+.drk:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#000;
+    opacity:0.3;
+}
+
+.carcap1{
+margin-bottom: 240px;
+font-family: 'Lobster', cursive;
+}
+
+.carcap2{
+    margin-right: 220px;
+    /* background: #1A237E; */
+    margin-bottom: 350px;
+    font-family: 'Lobster', cursive;
+    }
+
+.carslCap{
+    margin-right: 20px;
+}
+
+.rowCapt {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 30px;
+    margin-top: 5px;
+} 
+
+
+.displayCaption {
+margin-bottom: 20px;
+text-align: left;
+}
+
+.mediaCl {
+    font-size: 30px;
+    font-weight: 100;
+    margin-top: 60px;
+}
+
+
+
+/* #cardDiv{
+    background:#777;
+    height:600px;  
+    margin:1px solid black;
+    display:grid;
+    place-items:end;
+    overflow:hidden;
+    margin:1px solid black !important;
+
+} */
+
+
+
+
+
+
+

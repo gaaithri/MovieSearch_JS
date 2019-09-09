@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<title>Entertainment</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand bgCol ">MoviesInc <h1>!MM!</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+                <li class="navbar-nav">
+                    <label for="Movie"> Spot Your Show <label>
+                            <input type="text" id="mvId" name="mvName">
+                            <button class="btn btn-secondary" id="mvFindbtn">Go.. </button>
+                </li>
+
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Genre
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="Genre">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Comedy</a>
+                        <a class="dropdown-item" href="#">Romance</a>
+                        <a class="dropdown-item" href="#">Inspiration</a>
+                        <a class="dropdown-item" href="#">Fun</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <div class="container-fluid" id="opnView">
+        <div class="row">
+            <div class="col-md-3 d-flex justify-content-center">
+                <button type="button" id="opnBtn" class="btn btn-danger btn-lg">Click to Open the Doors of the World
+                    Shows </button>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img id="opnDisp" src="resources/pink_cinema.jpg"></div>
+            <div class="col-md-3 d-flex justify-content-center">
+                <button type="button" id="opnBtn1" class="btn btn-danger btn-lg">
+                    <p>MoviesInc !MM! </p>
+                    <p>Welcomes you to the Cinema World</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- On loading Api dispaly below data -->
+
+    <div class="container-fluid" id="apiDisp">
+        <div class="row lookDisp">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+
+
+
+        <div class="row rowDisp">
+            <div class="col-sm-3 col-md-3 rowCapt">
+                <p class="dispCaption"> Inspiration Corner</p>
+
+                <div class="row" float="right">
+                    <div class="col-md-12 cards">
+
+                        <div class="card " style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/Malgudi-Days-323981.jpg" class="card-img-top"
+                                    alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/haltandCatch.jpg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/alteredCarbon.jpeg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/start_up.jpg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/tvf_pitchers1.jpg" class="card-img-top" alt="Text1"></a>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+
+
+
+                <div class="row" float="right">
+                    <div class="col-md-12 cards">
+
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/office.jpg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/theprofit.jpg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/sharktank.jpg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/itcrowd.jpeg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/beingErica.jpg" class="card-img-top" alt="Text1"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" float="left">
+
+                <div id="carouselExampleInterval" class="carousel slide " data-ride="carousel" float="left">
+                    <div class="carousel-inner">
+                        <div class="carousel-item drk active carex" data-interval="2500">
+                            <img id="imageCar1" class="d-block w-100" alt="Silicon Valley" width="800px" height="580px">
+                            <div class="carousel-caption carcap1 d-none d-md-block">
+                                <button type="button" class="btn btn-secondary btn-lg">Lights...</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item drk carex" data-interval="3000">
+                            <img id="imageCar2" class="d-block w-100" alt="The Matrix" width="800px" height="580px">
+                            <div class="carousel-caption carcap2 d-none d-md-block">
+                                <button type="button" class="btn btn-success btn-lg">Action...</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item drk carex">
+                            <img id="imageCar3" class="d-block w-100" alt="GOT" width="800px" height="580px">
+                            <div class="carousel-caption carcap1 d-none d-md-block">
+                                <button type="button" class="btn btn-danger btn-lg">Camera...</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-sm-3 col-md-3 rowCapt">
+                <p class="dispCaption"> Fun Corner </p>
+
+                <div class="row" float="right">
+                    <div class="col-md-12 cards ">
+                        <div class="card card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/big_bangtheory.jpg" class="card-img-top" alt="text1"></a>
+                        </div>
+                        <div class="card card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/matrix.jpg" class="card-img-top" alt="text1"></a>
+                        </div>
+                        <div class="card card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/drama_oscar.jpg" class="card-img-top" alt="text1"></a>
+                        </div>
+                    </div>
+                </div>
+                <br> <br>
+
+                <div class="row" float="right">
+                    <div class="col-md-12 cards">
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/siliconValley.jpeg" class="card-img-top" alt="text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/big_bangtheory.jpg" class="card-img-top" alt="text1"></a>
+                        </div>
+                        <div class="card" style="width: 10rem;" float="right">
+                            <a href="#"> <img src="resources/tv_alltimeOld.jpg" class="card-img-top" alt="text1"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Search Result  -->
+    <div class="container-fluid" id="srchResult">
+        <div class="row">
+            <div class="col-12" id=searchList>
+                <ul class="list-unstyled">
+                    <li class="media">
+                        <img class="mr-3 mb-4 mt-2" id="srch1" alt="Generic placeholder image">
+                        <h5 class="mt-0 mb-1">Details</h5>
+                        <div class="media-body text-light mediaCl" id="mBdy1">
+
+
+                        </div>
+
+                    </li>
+                    <li class="media">
+                        <img class="mr-3 mb-4 mt-2" id="srch2" alt="Generic placeholder image">
+                        <h5 class="mt-0 mb-1">Details</h5>
+                        <div class="media-body text-light mt-7 mediaCl" id="mBdy2">
+
+
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="mr-3 mb-4 mt-2" id="srch3" alt="Generic placeholder image">
+                        <h5 class="mt-0 mb-1">Details</h5>
+                        <div class="media-body text-light mt-7 mediaCl" id="mBdy3">
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid" id="footer">
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script>
+
+            function callApi(printMov) {
+                console.log("in2")
+                var result = null;
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', urLink);
+                xhr.send()
+                xhr.onload = function () {
+                    result = xhr.response
+                    if (xhr.status == 200) {
+                        console.log("xhr", xhr.response)
+                        printMov(result);
+                    }
+                    else {
+                        console.log("There is an error in the request made" + xhr.response + xhr.response)
+                    }
+                }
+
+            }
+
+
+            var printMov = function (result) {
+                var data = JSON.parse(result);
+                console.log(data);
+                var movTitle = data.Title;
+                console.log(movTitle)
+                // var totRes = data.totalResults;
+                // console.log("tot srch Results",totRes) 
+                // var  srchkey=data.Search[5].Title;
+                // console.log("Result 6",srchkey)         
+                // var rating = data.Episodes[0].imdbRating
+                var bodyEle = document.querySelector('body');
+                var dispOutput = document.createElement('p');
+                if (result == null) {
+                    dispOutput.textContent = "Error, No data found";
+                }
+                else {
+                    var img1 = document.querySelector("#imageCar1")
+                    img1.setAttribute('src', 'resources/siliconValley.jpeg')
+                    //  dispOutput.innerText=movTitle;
+                    var img2 = document.querySelector("#imageCar2")
+                    img2.setAttribute('src', 'resources/matrix.jpg')
+                    var img3 = document.querySelector("#imageCar3")
+                    img3.setAttribute('src', "resources/big_bangtheory.jpg")
+                    // var parntDeck = document.querySelector('.contCard');
+
+                }
+                // bodyEle.append(dispOutput)
+                // console.log(data)
+                // console.log("in3");
+                // console.log(data.Title)
+                // console.log(rating)
+
+            }
+
+            var dispSrchMov = function (result) {
+                var data = JSON.parse(result);
+                console.log(data);
+
+
+                // console.log("tot srch Results",totRes) 
+                // var  srchkey=data.Search[5].Title;
+                // console.log("Result 6",srchkey)         
+                // var rating = data.Episodes[0].imdbRating
+                var bodyEle = document.querySelector('body');
+                var dispOutput = document.createElement('p');
+                if (result == null) {
+                    dispOutput.textContent = "Error, No data found";
+                }
+                else {
+                    var totRes = data.totalResults;
+                    console.log(totRes)
+                    var imgSrc1 = document.getElementById('srch1');
+                    var imgSrc2 = document.getElementById('srch2');
+                    var imgSrc3 = document.getElementById('srch3');
+                    console.log(imgSrc1)
+                    var postr = data.Search;
+                    //console.log(data.Search)
+                    console.log(postr[0].Poster)
+                    var imgUrl1 = data.Search[0].Poster;
+                    var imgUrl2 = data.Search[1].Poster;
+                    var imgUrl3 = data.Search[2].Poster;
+                    imgSrc1.setAttribute('src', imgUrl1)
+                    imgSrc2.setAttribute('src', imgUrl2)
+                    imgSrc3.setAttribute('src', imgUrl3)
+                    console.log(imgSrc1.src);
+
+                    var divData = document.getElementById('mBdy1');
+                    var divData1 = document.getElementById('mBdy2');
+                    var divData2 = document.getElementById('mBdy3');
+                    console.log(divData);
+                    var para = document.createElement('p');
+                    var para2 = document.createElement('p');
+                    var para3 = document.createElement('p');
+                    var dataDisp = document.createTextNode("Title:" + postr[0].Title);
+                    var dataDisp1 = document.createTextNode("Year:" + postr[0].Year);
+                    var dataDisp2 = document.createTextNode("Show Type:" + postr[0].Type);
+                    if (document.getElementById("p1") != null) {
+                        var child = document.getElementById("p1");
+                        child.parentNode.removeChild(child);
+
+                    }
+
+                    if (document.getElementById("p2") != null) {
+                        var child = document.getElementById("p2");
+                        child.parentNode.removeChild(child);
+
+                    }
+
+                    if (document.getElementById("p3") != null) {
+                        var child = document.getElementById("p3");
+                        child.parentNode.removeChild(child);
+                    }
+                    para.appendChild(dataDisp);
+                    para.setAttribute('id', 'p1');
+                    para2.appendChild(dataDisp1);
+                    para2.setAttribute('id', 'p2');
+                    para3.appendChild(dataDisp2);
+                    para3.setAttribute('id', 'p3');
+                    divData.append(para);
+                    divData.append(para2);
+                    divData.append(para3);
+
+                    var para21 = document.createElement('p');
+                    var para22 = document.createElement('p');
+                    var para23 = document.createElement('p');
+                    var dataDisp21 = document.createTextNode("Title:" + postr[1].Title);
+                    var dataDisp22 = document.createTextNode("Year:" + postr[1].Year);
+                    var dataDisp23 = document.createTextNode("Show Type:" + postr[1].Type);
+                    if (document.getElementById("p21") != null) {
+                        var child = document.getElementById("p21");
+                        child.parentNode.removeChild(child);
+
+                    }
+
+                    if (document.getElementById("p22") != null) {
+                        var child = document.getElementById("p22");
+                        child.parentNode.removeChild(child);
+
+                    }
+
+                    if (document.getElementById("p23") != null) {
+                        var child = document.getElementById("p23");
+                        child.parentNode.removeChild(child);
+                    }
+                    para21.appendChild(dataDisp21);
+                    para21.setAttribute('id', 'p21');
+                    para22.appendChild(dataDisp22);
+                    para22.setAttribute('id', 'p22');
+                    para23.appendChild(dataDisp23);
+                    para23.setAttribute('id', 'p23');
+                    divData1.append(para21);
+                    divData1.append(para22);
+                    divData1.append(para23);
+
+                    var para31 = document.createElement('p');
+                    var para32 = document.createElement('p');
+                    var para33 = document.createElement('p');
+                    var dataDisp31 = document.createTextNode("Title:" + postr[2].Title);
+                    var dataDisp32 = document.createTextNode("Year:" + postr[2].Year);
+                    var dataDisp33 = document.createTextNode("Show Type:" + postr[2].Type);
+                    if (document.getElementById("p31") != null) {
+                        var child = document.getElementById("p31");
+                        child.parentNode.removeChild(child);
+
+                    }
+
+                    if (document.getElementById("p32") != null) {
+                        var child = document.getElementById("p32");
+                        child.parentNode.removeChild(child);
+
+                    }
+
+                    if (document.getElementById("p33") != null) {
+                        var child = document.getElementById("p33");
+                        child.parentNode.removeChild(child);
+                    }
+
+                    para31.appendChild(dataDisp31);
+                    para31.setAttribute('id', 'p31');
+                    para32.appendChild(dataDisp32);
+                    para32.setAttribute('id', 'p32');
+                    para33.appendChild(dataDisp33);
+                    para33.setAttribute('id', 'p33');
+                    divData2.append(para31);
+                    divData2.append(para32);
+                    divData2.append(para33);
+
+
+                    //+  "</br> Type" + postr[2].Type
+                    //console.log (txtDt1)
+                    //  var i=0;
+                    //  var schLists = document.querySelectorAll('#searchList li.media');
+                    //  schLists.forEach(function(schList){
+                    //      //console.log (schList.innerHTML)
+                    //      if (i < 3){
+                    //  var divi=li.querySelector('div');
+                    //  console.log(schList.textContent)
+                    var titlPara = document.createElement('p');
+                    var yrPara = document.createElement('p');
+                    var typPara = document.createElement('p');
+                    titlPara = "Title:" + postr[0].Title;
+                    console.log(titlPara)
+                    yrPara = "Year:" + postr[0].Year;
+                    console.log(yrPara)
+                    typPara = "Show Type:" + postr[0].Type;
+                    console.log(typPara)
+                    //divData.appendChild(titlPara)
+                    //   txtDt1.appendChild(yrPara)
+                    //   txtDt1.appendChild(typPara)
+                    // $(document).ready(function()
+                    // {
+
+                    //     var ul = $("ul");
+                    //     var li = 
+                    // });
+
+
+
+
+
+
+                }
+            }
+
+            var urLink;
+            var dispBtn = document.getElementById('mvFindbtn');
+            console.log(dispBtn)
+            // var urLink = 
+            dispBtn.addEventListener('click', function () {
+                var movieSrch = document.getElementById("mvId").value;
+
+                urLink = "http://www.omdbapi.com/?apikey=91589d02&s=" + movieSrch
+
+                var hideLdata = document.getElementById('opnView');
+                var hideDispdata = document.getElementById('apiDisp');
+                var showSrchdata = document.getElementById('srchResult');
+                hideLdata.style.display = "none";
+                hideDispdata.style.display = "none";
+                showSrchdata.style.display = "block";
+                callApi(dispSrchMov);
+
+                console.log(movieSrch);
+                console.log(urLink);
+            });
+
+
+            var opnDispBtn = document.getElementById("opnBtn");
+            console.log(opnDispBtn)
+
+            opnDispBtn.addEventListener('click', function () {
+                var hideData = document.getElementById('opnView');
+                var showData = document.getElementById('apiDisp');
+                var hideSrc = document.getElementById('srchResult');
+                console.log(hideData)
+
+                console.log("before loop")
+                urLink = "http://www.omdbapi.com/?i=tt0898266&Season=2&apikey=91589d02"
+                callApi(printMov);
+
+                console.log("landing page code")
+                hideData.style.display = "none";
+                showData.style.display = "block";
+                hideSrc.style.display = "none";
+                console.log("after loop")
+            });
+
+        </script>
+</body>
+
+</html>
