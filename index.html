@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand bgCol ">MoviesInc <h1>!MM!</h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -23,12 +22,9 @@
                             <input type="text" id="mvId" name="mvName">
                             <button class="btn btn-secondary" id="mvFindbtn">Go.. </button>
                 </li>
-
                 <!-- <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li> -->
-
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -75,8 +71,6 @@
             </div>
         </div>
 
-
-
         <div class="row rowDisp">
             <div class="col-sm-3 col-md-3 rowCapt">
                 <p class="dispCaption"> Inspiration Corner</p>
@@ -100,17 +94,13 @@
                         <div class="card" style="width: 10rem;" float="right">
                             <a href="#"> <img src="resources/tvf_pitchers1.jpg" class="card-img-top" alt="Text1"></a>
                         </div>
-
-                    </div>
+                   </div>
                 </div>
-                <br>
+              <br>
 
-
-
-                <div class="row" float="right">
+              <div class="row" float="right">
                     <div class="col-md-12 cards">
-
-                        <div class="card" style="width: 10rem;" float="right">
+                       <div class="card" style="width: 10rem;" float="right">
                             <a href="#"> <img src="resources/office.jpg" class="card-img-top" alt="Text1"></a>
                         </div>
                         <div class="card" style="width: 10rem;" float="right">
@@ -130,7 +120,6 @@
             </div>
 
             <div class="col-md-6" float="left">
-
                 <div id="carouselExampleInterval" class="carousel slide " data-ride="carousel" float="left">
                     <div class="carousel-inner">
                         <div class="carousel-item drk active carex" data-interval="2500">
@@ -209,41 +198,24 @@
                         <img class="mr-3 mb-4 mt-2" id="srch1" alt="Generic placeholder image">
                         <h5 class="mt-0 mb-1">Details</h5>
                         <div class="media-body text-light mediaCl" id="mBdy1">
-
-
-                        </div>
-
+                       </div>
                     </li>
                     <li class="media">
                         <img class="mr-3 mb-4 mt-2" id="srch2" alt="Generic placeholder image">
                         <h5 class="mt-0 mb-1">Details</h5>
                         <div class="media-body text-light mt-7 mediaCl" id="mBdy2">
-
-
                         </div>
                     </li>
                     <li class="media">
                         <img class="mr-3 mb-4 mt-2" id="srch3" alt="Generic placeholder image">
-                        <h5 class="mt-0 mb-1">Details</h5>
+                       <h5 class="mt-0 mb-1">Details</h5>
                         <div class="media-body text-light mt-7 mediaCl" id="mBdy3">
-
                         </div>
                     </li>
                 </ul>
             </div>
-
-
-
-
         </div>
     </div>
-
-
-
-
-
-
-
     <div class="container-fluid" id="footer">
         <div class="row">
             <div class="col-md-12">
@@ -251,30 +223,7 @@
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -344,8 +293,6 @@
             var dispSrchMov = function (result) {
                 var data = JSON.parse(result);
                 console.log(data);
-
-
                 // console.log("tot srch Results",totRes) 
                 // var  srchkey=data.Search[5].Title;
                 // console.log("Result 6",srchkey)         
@@ -372,7 +319,6 @@
                     imgSrc2.setAttribute('src', imgUrl2)
                     imgSrc3.setAttribute('src', imgUrl3)
                     console.log(imgSrc1.src);
-
                     var divData = document.getElementById('mBdy1');
                     var divData1 = document.getElementById('mBdy2');
                     var divData2 = document.getElementById('mBdy3');
@@ -474,7 +420,6 @@
                     divData2.append(para32);
                     divData2.append(para33);
 
-
                     //+  "</br> Type" + postr[2].Type
                     //console.log (txtDt1)
                     //  var i=0;
@@ -502,24 +447,15 @@
                     //     var ul = $("ul");
                     //     var li = 
                     // });
-
-
-
-
-
-
                 }
             }
-
             var urLink;
             var dispBtn = document.getElementById('mvFindbtn');
             console.log(dispBtn)
             // var urLink = 
             dispBtn.addEventListener('click', function () {
                 var movieSrch = document.getElementById("mvId").value;
-
                 urLink = "http://www.omdbapi.com/?apikey=91589d02&s=" + movieSrch
-
                 var hideLdata = document.getElementById('opnView');
                 var hideDispdata = document.getElementById('apiDisp');
                 var showSrchdata = document.getElementById('srchResult');
@@ -527,33 +463,26 @@
                 hideDispdata.style.display = "none";
                 showSrchdata.style.display = "block";
                 callApi(dispSrchMov);
-
                 console.log(movieSrch);
                 console.log(urLink);
             });
 
-
             var opnDispBtn = document.getElementById("opnBtn");
             console.log(opnDispBtn)
-
             opnDispBtn.addEventListener('click', function () {
                 var hideData = document.getElementById('opnView');
                 var showData = document.getElementById('apiDisp');
                 var hideSrc = document.getElementById('srchResult');
                 console.log(hideData)
-
                 console.log("before loop")
                 urLink = "http://www.omdbapi.com/?i=tt0898266&Season=2&apikey=91589d02"
                 callApi(printMov);
-
                 console.log("landing page code")
                 hideData.style.display = "none";
                 showData.style.display = "block";
                 hideSrc.style.display = "none";
                 console.log("after loop")
             });
-
         </script>
 </body>
-
 </html>
