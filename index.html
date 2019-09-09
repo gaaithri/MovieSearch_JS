@@ -46,13 +46,12 @@
     <!-- Landing Page -->
     <div class="container-fluid" id="opnView">
         <div class="row">
-            <div class="col-md-3 d-flex justify-content-center">
-                <button type="button" id="opnBtn" class="btn btn-danger btn-lg">Click to Open the Doors of the World
-                    Shows </button>
+            <div class="col-4 col-md-3 d-flex justify-content-center">
+                <button type="button" id="opnBtn" class="btn btn-danger btn-lg">Click to Open the Doors of the World Shows                Shows </button>
             </div>
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-4 col-md-6 d-flex justify-content-center">
                 <img id="opnDisp" src="resources/pink_cinema.jpg"></div>
-            <div class="col-md-3 d-flex justify-content-center">
+            <div class="col-4 col-md-3 d-flex justify-content-center">
                 <button type="button" id="opnBtn1" class="btn btn-danger btn-lg">
                     <p>MoviesInc !MM! </p>
                     <p>Welcomes you to the Cinema World</p>
@@ -60,17 +59,17 @@
             </div>
         </div>
     </div>
+
+   
     <!-- Err page if Api call fails -->
     <div class="container-fluid" id="errView">
         <div class="row">
             <div class="col-md-3 d-flex justify-content-center errBg text-light">
-                No Show: Sorry Page Unavailable at this time
-               
+               No Show: Sorry Page Unavailable at this time
             </div>
             <div class="col-6 col-md-6 d-flex justify-content-center">
                 <img id="opnDisp" src="resources/pink_cinema.jpg"></div>
             <div class="col-md-3 d-flex justify-content-center errBg text-light">
-               
                     <p>MoviesInc !MM! </p>
                     <p>Welcomes you to the Cinema World</p>
                 </button>
@@ -80,7 +79,6 @@
 
 
     <!-- On loading Api dispaly below data -->
-
     <div class="container-fluid" id="apiDisp">
         <div class="row lookDisp">
             <div class="col-md-12">
@@ -234,10 +232,11 @@
         </div>
     </div>
     <div class="container-fluid" id="footer">
-        <div class="row">
-            <div class="col-md-12">
-            </div>
-        </div>
+     <div class="row">
+         <div class="col-md-12">
+         
+         </div>
+     </div>
 
 
 
@@ -277,8 +276,8 @@
 
             }
 
-            var errData = document.getElementById("errView");
-
+    
+    // Display Home Page       
             var printMov = function (result) {
                 hideData.style.display = "none";
                 showData.style.display = "block";
@@ -309,16 +308,15 @@
                     var img3 = document.querySelector("#imageCar3")
                     img3.setAttribute('src', "resources/big_bangtheory.jpg")
                     // var parntDeck = document.querySelector('.contCard');
-
                 }
                 // bodyEle.append(dispOutput)
                 // console.log(data)
                 // console.log("in3");
                 // console.log(data.Title)
                 // console.log(rating)
-
             }
-
+            
+            // Display Search Results
             var dispSrchMov = function (result) {
                 var data = JSON.parse(result);
                 console.log(data);
@@ -334,12 +332,13 @@
                 else {
                     var totRes = data.totalResults;
                     console.log(totRes)
+                   
+                   // Load img dynamically 
                     var imgSrc1 = document.getElementById('srch1');
                     var imgSrc2 = document.getElementById('srch2');
                     var imgSrc3 = document.getElementById('srch3');
                     console.log(imgSrc1)
-                    var postr = data.Search;
-                    //console.log(data.Search)
+                    var postr = data.Search;//console.log(data.Search)
                     console.log(postr[0].Poster)
                     var imgUrl1 = data.Search[0].Poster;
                     var imgUrl2 = data.Search[1].Poster;
@@ -348,6 +347,8 @@
                     imgSrc2.setAttribute('src', imgUrl2)
                     imgSrc3.setAttribute('src', imgUrl3)
                     console.log(imgSrc1.src);
+
+                    //load search results on to page.
                     var divData = document.getElementById('mBdy1');
                     var divData1 = document.getElementById('mBdy2');
                     var divData2 = document.getElementById('mBdy3');
@@ -449,15 +450,7 @@
                     divData2.append(para32);
                     divData2.append(para33);
 
-                    //+  "</br> Type" + postr[2].Type
-                    //console.log (txtDt1)
-                    //  var i=0;
-                    //  var schLists = document.querySelectorAll('#searchList li.media');
-                    //  schLists.forEach(function(schList){
-                    //      //console.log (schList.innerHTML)
-                    //      if (i < 3){
-                    //  var divi=li.querySelector('div');
-                    //  console.log(schList.textContent)
+                    //Set Search Result
                     var titlPara = document.createElement('p');
                     var yrPara = document.createElement('p');
                     var typPara = document.createElement('p');
@@ -467,39 +460,30 @@
                     console.log(yrPara)
                     typPara = "Show Type:" + postr[0].Type;
                     console.log(typPara)
-                    //divData.appendChild(titlPara)
-                    //   txtDt1.appendChild(yrPara)
-                    //   txtDt1.appendChild(typPara)
-                    // $(document).ready(function()
-                    // {
-
-                    //     var ul = $("ul");
-                    //     var li = 
-                    // });
+                    
                 }
             }
+           
             var urLink;
             var dispBtn = document.getElementById('mvFindbtn');
             console.log(dispBtn)
             // var urLink = 
+            
             dispBtn.addEventListener('click', function () {
                 var movieSrch = document.getElementById("mvId").value;
+
+                //Append search value to URL
                 urLink = "http://www.omdbapi.com/?apikey=91589d02&s=" + movieSrch
-                var hideLdata = document.getElementById('opnView');
-                var hideDispdata = document.getElementById('apiDisp');
-                var showSrchdata = document.getElementById('srchResult');
-                hideLdata.style.display = "none";
-                hideDispdata.style.display = "none";
-                showSrchdata.style.display = "block";
-                errData.style.display = "none";
                 callApi(dispSrchMov);
+                hideData.style.display = "none";
+                showdata.style.display = "none";
+                hideSrc.style.display = "block";
+                errData.style.display = "none";
                 console.log(movieSrch);
                 console.log(urLink);
             });
 
-            var hideData = document.getElementById('opnView');
-                var showData = document.getElementById('apiDisp');
-                var hideSrc = document.getElementById('srchResult');
+               
 
             var opnDispBtn = document.getElementById("opnBtn");
             console.log(opnDispBtn)
@@ -514,6 +498,12 @@
                 console.log("landing page code")
                 console.log("after loop")
             });
+
+
+            var hideData = document.getElementById('opnView');
+            var showData = document.getElementById('apiDisp');
+            var hideSrc = document.getElementById('srchResult');
+            var errData = document.getElementById("errView");
         </script>
 </body>
 
