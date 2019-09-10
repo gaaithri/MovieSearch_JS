@@ -265,24 +265,21 @@
                         printMov(result);
                     }
                     else {
-
-                        errData.style.display = "block";
-                        hideData.style.display = "none";
-                        showData.style.display = "none";
-                        hideSrc.style.display = "none";
+                        errorRespPage.style.display = "block";
+                        cinemaPage.style.display = "none";
+                        homePage.style.display = "none";
+                        searchRespage.style.display = "none";
                         console.log("There is an error in the request made" + xhr.response + xhr.response)
                     }
                 }
-
             }
-
     
     // Display Home Page       
             var printMov = function (result) {
-                hideData.style.display = "none";
-                showData.style.display = "block";
-                hideSrc.style.display = "none";
-                errData.style.display = "none";
+                cinemaPage.style.display = "none";
+                homePage.style.display = "block";
+                searchRespage.style.display = "none";
+                errorRespPage.style.display = "none";
                 var data = JSON.parse(result);
                 console.log(data);
                 var movTitle = data.Title;
@@ -299,14 +296,13 @@
                 }
                 else {
                     var pics = data.Search;
-
-                    var img1 = document.querySelector("#imageCar1")
-                    img1.setAttribute('src', 'resources/siliconValley.jpeg')
+                    var carouselPicOne = document.querySelector("#imageCar1")
+                    carouselPicOne.setAttribute('src', 'resources/siliconValley.jpeg')
                     //  dispOutput.innerText=movTitle;
-                    var img2 = document.querySelector("#imageCar2")
-                    img2.setAttribute('src', 'resources/matrix.jpg')
-                    var img3 = document.querySelector("#imageCar3")
-                    img3.setAttribute('src', "resources/big_bangtheory.jpg")
+                    var carouselPicTwo = document.querySelector("#imageCar2")
+                    carouselPicTwo.setAttribute('src', 'resources/matrix.jpg')
+                    var carouselPicThree = document.querySelector("#imageCar3")
+                    carouselPicThree.setAttribute('src', "resources/big_bangtheory.jpg")
                     // var parntDeck = document.querySelector('.contCard');
                 }
                 // bodyEle.append(dispOutput)
@@ -334,63 +330,63 @@
                     console.log(totRes)
                    
                    // Load img dynamically 
-                    var imgSrc1 = document.getElementById('srch1');
-                    var imgSrc2 = document.getElementById('srch2');
-                    var imgSrc3 = document.getElementById('srch3');
-                    console.log(imgSrc1)
+                    var srchImgOne = document.getElementById('srch1');
+                    var srchImgTwo = document.getElementById('srch2');
+                    var srchImgThree = document.getElementById('srch3');
+                    console.log(srchImgOne)
                     var postr = data.Search;//console.log(data.Search)
                     console.log(postr[0].Poster)
-                    var imgUrl1 = data.Search[0].Poster;
-                    var imgUrl2 = data.Search[1].Poster;
-                    var imgUrl3 = data.Search[2].Poster;
-                    imgSrc1.setAttribute('src', imgUrl1)
-                    imgSrc2.setAttribute('src', imgUrl2)
-                    imgSrc3.setAttribute('src', imgUrl3)
-                    console.log(imgSrc1.src);
+                    var srchImgOneUrl = data.Search[0].Poster;
+                    var srchImgTwoUrl = data.Search[1].Poster;
+                    var srchImgThreeUrl = data.Search[2].Poster;
+                    srchImgOne.setAttribute('src', srchImgOneUrl)
+                    srchImgTwo.setAttribute('src', srchImgTwoUrl)
+                    srchImgThree.setAttribute('src', srchImgThreeUrl)
+                    console.log(srchImgOne.src);
 
                     //load search results on to page.
-                    var divData = document.getElementById('mBdy1');
-                    var divData1 = document.getElementById('mBdy2');
-                    var divData2 = document.getElementById('mBdy3');
-                    console.log(divData);
-                    var para = document.createElement('p');
-                    var para2 = document.createElement('p');
-                    var para3 = document.createElement('p');
-                    var dataDisp = document.createTextNode("Title:" + postr[0].Title);
-                    var dataDisp1 = document.createTextNode("Year:" + postr[0].Year);
-                    var dataDisp2 = document.createTextNode("Show Type:" + postr[0].Type);
+                    var searchData = document.getElementById('mBdy1');
+                    var searchDataOne = document.getElementById('mBdy2');
+                    var searchDataTwo = document.getElementById('mBdy3');
+                    console.log(searchData);
+                    var fsrchPara = document.createElement('p');
+                    var fsrchParaTwo = document.createElement('p');
+                    var fsrchParaThree = document.createElement('p');
+                    var fsrchDisp = document.createTextNode("Title:" + postr[0].Title);
+                    var fsrchDispTwo = document.createTextNode("Year:" + postr[0].Year);
+                    var fsrchDispThree = document.createTextNode("Show Type:" + postr[0].Type);
                     if (document.getElementById("p1") != null) {
-                        var child = document.getElementById("p1");
-                        child.parentNode.removeChild(child);
+                        var fsrchText = document.getElementById("p1");
+                        fsrchText.parentNode.removeChild(fsrchText);
 
                     }
 
                     if (document.getElementById("p2") != null) {
-                        var child = document.getElementById("p2");
-                        child.parentNode.removeChild(child);
+                        var fsrchTextTwo = document.getElementById("p2");
+                        fsrchTextTwo.parentNode.removeChild(fsrchTextTwo);
 
                     }
 
                     if (document.getElementById("p3") != null) {
-                        var child = document.getElementById("p3");
-                        child.parentNode.removeChild(child);
+                        var fsrchTextThree = document.getElementById("p3");
+                        fsrchTextThre.parentNode.removeChild(fsrchTextThree);
                     }
-                    para.appendChild(dataDisp);
-                    para.setAttribute('id', 'p1');
-                    para2.appendChild(dataDisp1);
-                    para2.setAttribute('id', 'p2');
-                    para3.appendChild(dataDisp2);
-                    para3.setAttribute('id', 'p3');
-                    divData.append(para);
-                    divData.append(para2);
-                    divData.append(para3);
+                    fsrchPara.appendChild(fsrchDisp);
+                    fsrchPara.setAttribute('id','p1');
+                    fsrchParaTwo.appendChild(fsrchDispTwo);
+                    fsrchParaTwo.setAttribute('id','p2');
+                    fsrchParaThree.appendChild(fsrchDispThree);
+                    fsrchParaThree.setAttribute('id','p3');
+                    searchData.append(fsrchPara);
+                    searchData.append(fsrchParaTwo);
+                    searchData.append(fsrchParaThree);
 
-                    var para21 = document.createElement('p');
-                    var para22 = document.createElement('p');
-                    var para23 = document.createElement('p');
-                    var dataDisp21 = document.createTextNode("Title:" + postr[1].Title);
-                    var dataDisp22 = document.createTextNode("Year:" + postr[1].Year);
-                    var dataDisp23 = document.createTextNode("Show Type:" + postr[1].Type);
+                    var ssrchPara = document.createElement('p');
+                    var ssrchParaOne = document.createElement('p');
+                    var ssrchParaTwo = document.createElement('p');
+                    var sdataDisp = document.createTextNode("Title:" + postr[1].Title);
+                    var sdataDispOne = document.createTextNode("Year:" + postr[1].Year);
+                    var sdataDispTwo = document.createTextNode("Show Type:" + postr[1].Type);
                     if (document.getElementById("p21") != null) {
                         var child = document.getElementById("p21");
                         child.parentNode.removeChild(child);
@@ -407,22 +403,23 @@
                         var child = document.getElementById("p23");
                         child.parentNode.removeChild(child);
                     }
-                    para21.appendChild(dataDisp21);
-                    para21.setAttribute('id', 'p21');
-                    para22.appendChild(dataDisp22);
-                    para22.setAttribute('id', 'p22');
-                    para23.appendChild(dataDisp23);
-                    para23.setAttribute('id', 'p23');
-                    divData1.append(para21);
-                    divData1.append(para22);
-                    divData1.append(para23);
+                    ssrchPara.appendChild(sdataDisp);
+                    ssrchPara.setAttribute('id', 'p21');
+                    ssrchParaOne.appendChild(sdataDispOne);
+                    ssrchParaOne.setAttribute('id', 'p22');
+                    ssrchParaTwo.appendChild(sdataDispTwo);
+                    ssrchParaTwo.setAttribute('id', 'p23');
+                    searchDataOne.append(ssrchPara);
+                    searchDataOne.append(ssrchParaOne);
+                    searchDataOne.append(ssrchParaTwo);
 
-                    var para31 = document.createElement('p');
-                    var para32 = document.createElement('p');
-                    var para33 = document.createElement('p');
+                    var tsrchPara = document.createElement('p');
+                    var tsrchParaOne = document.createElement('p');
+                    var tsrchParaTwo = document.createElement('p');
                     var dataDisp31 = document.createTextNode("Title:" + postr[2].Title);
                     var dataDisp32 = document.createTextNode("Year:" + postr[2].Year);
                     var dataDisp33 = document.createTextNode("Show Type:" + postr[2].Type);
+                    
                     if (document.getElementById("p31") != null) {
                         var child = document.getElementById("p31");
                         child.parentNode.removeChild(child);
@@ -440,15 +437,15 @@
                         child.parentNode.removeChild(child);
                     }
 
-                    para31.appendChild(dataDisp31);
-                    para31.setAttribute('id', 'p31');
-                    para32.appendChild(dataDisp32);
-                    para32.setAttribute('id', 'p32');
-                    para33.appendChild(dataDisp33);
-                    para33.setAttribute('id', 'p33');
-                    divData2.append(para31);
-                    divData2.append(para32);
-                    divData2.append(para33);
+                    tsrchPara.appendChild(dataDisp31);
+                    tsrchPara.setAttribute('id', 'p31');
+                    tsrchParaOne.appendChild(dataDisp32);
+                    tsrchParaOne.setAttribute('id', 'p32');
+                    tsrchParaTwo.appendChild(dataDisp33);
+                    tsrchParaTwo.setAttribute('id', 'p33');
+                    searchDataTwo.append(tsrchPara);
+                    searchDataTwo.append(tsrchParaOne);
+                    searchDataTwo.append(tsrchParaTwo);
 
                     //Set Search Result
                     var titlPara = document.createElement('p');
@@ -475,35 +472,30 @@
                 //Append search value to URL
                 urLink = "http://www.omdbapi.com/?apikey=91589d02&s=" + movieSrch
                 callApi(dispSrchMov);
-                hideData.style.display = "none";
-                showdata.style.display = "none";
-                hideSrc.style.display = "block";
-                errData.style.display = "none";
+                cinemaPage.style.display = "none";
+                homePage.style.display = "none";
+                searchRespage.style.display = "block";
+                errorRespPage.style.display = "none";
                 console.log(movieSrch);
                 console.log(urLink);
             });
-
-               
-
             var opnDispBtn = document.getElementById("opnBtn");
             console.log(opnDispBtn)
             opnDispBtn.addEventListener('click', function () {
-                // var hideData = document.getElementById('opnView');
-                // var showData = document.getElementById('apiDisp');
-                // var hideSrc = document.getElementById('srchResult');
-                console.log(hideData)
+                // var cinemaPage = document.getElementById('opnView');
+                // var homePage = document.getElementById('apiDisp');
+                // varsearchRespage = document.getElementById('srchResult');
+                console.log(cinemaPage)
                 console.log("before loop")
                 urLink = "http://www.omdbapi.com/?i=tt0898266&Season=2&apikey=91589d02"
                 callApi(printMov);
                 console.log("landing page code")
                 console.log("after loop")
             });
-
-
-            var hideData = document.getElementById('opnView');
-            var showData = document.getElementById('apiDisp');
-            var hideSrc = document.getElementById('srchResult');
-            var errData = document.getElementById("errView");
+            var cinemaPage = document.getElementById('opnView');
+            var homePage = document.getElementById('apiDisp');
+            var searchRespage = document.getElementById('srchResult');
+            var errorRespPage = document.getElementById("errView");
         </script>
 </body>
 
