@@ -1,4 +1,4 @@
-# masai-week-5
+# Movies:LET US Search
 Movie Let's Search : 
 In this project search for the movies based on movie title rating,cast or any random word.
 It also enables search based on Genre of the Movies and other parameters.
